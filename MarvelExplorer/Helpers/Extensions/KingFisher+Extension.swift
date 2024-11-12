@@ -9,7 +9,14 @@ import Kingfisher
 import UIKit
 
 extension UIImageView {
-    func loadImage(from urlString: String?, placeholder: UIImage? = nil, displayLoader: Bool = true, loaderStyle: UIActivityIndicatorView.Style = .medium, loaderColor: UIColor = .gray, ignoreDownSample: Bool = false, shouldScale: Bool = true, onComplete: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil, downloadTask: ((DownloadTask?) -> Void)? = nil) {
+    func loadImage(from urlString: String?,
+                   placeholder: UIImage? = nil,
+                   displayLoader: Bool = true,
+                   loaderStyle: UIActivityIndicatorView.Style = .medium,
+                   loaderColor: UIColor = .gray,
+                   ignoreDownSample: Bool = false,
+                   shouldScale: Bool = true,
+                   onComplete: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil, downloadTask: ((DownloadTask?) -> Void)? = nil) {
         guard let url = URL(string: urlString ?? "") else { return }
         if displayLoader {
             let customIndicator = KingFisherCustomIndicator()
@@ -22,6 +29,7 @@ extension UIImageView {
             .cacheOriginalImage,
             .alsoPrefetchToMemory,
         ]
+        
         if shouldScale {
             imageOptions.insert(.scaleFactor(UIScreen.main.scale), at: 0)
         }

@@ -7,10 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B616CF62CE395F100A0A352 /* MarvelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B616CF52CE395F100A0A352 /* MarvelResponse.swift */; };
 		5B6B83D22CE2CC5E0077B8B1 /* MarvelCharactersDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83D12CE2CC5E0077B8B1 /* MarvelCharactersDetailsVC.swift */; };
 		5B6B83D62CE322A50077B8B1 /* UIScrollView+Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83D52CE322A50077B8B1 /* UIScrollView+Pagination.swift */; };
 		5B6B83DD2CE3261B0077B8B1 /* LoadMoreTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6B83DB2CE3261B0077B8B1 /* LoadMoreTableViewFooter.xib */; };
 		5B6B83DE2CE3261B0077B8B1 /* LoadMoreTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83DC2CE3261B0077B8B1 /* LoadMoreTableViewFooter.swift */; };
+		5B6B83E72CE351690077B8B1 /* MainImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6B83E62CE351690077B8B1 /* MainImageCell.xib */; };
+		5B6B83E92CE351750077B8B1 /* MainImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83E82CE351750077B8B1 /* MainImageCell.swift */; };
+		5B6B83EB2CE351860077B8B1 /* CharacterInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6B83EA2CE351860077B8B1 /* CharacterInfoCell.xib */; };
+		5B6B83ED2CE3518F0077B8B1 /* CharacterInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83EC2CE3518F0077B8B1 /* CharacterInfoCell.swift */; };
+		5B6B83EF2CE351AF0077B8B1 /* CharacterContentContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83EE2CE351AF0077B8B1 /* CharacterContentContainerCell.swift */; };
+		5B6B83F12CE351B70077B8B1 /* CharacterContentContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6B83F02CE351B70077B8B1 /* CharacterContentContainerCell.xib */; };
+		5B6B83F32CE351C60077B8B1 /* RelatedLinksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83F22CE351C60077B8B1 /* RelatedLinksCell.swift */; };
+		5B6B83F52CE351D30077B8B1 /* RelatedLinksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6B83F42CE351D30077B8B1 /* RelatedLinksCell.xib */; };
+		5B6B83F82CE353AD0077B8B1 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83F72CE353AD0077B8B1 /* Storyboarded.swift */; };
+		5B6B83FA2CE3710E0077B8B1 /* CharacterContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83F92CE3710E0077B8B1 /* CharacterContentCell.swift */; };
+		5B6B83FC2CE371150077B8B1 /* CharacterContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6B83FB2CE371150077B8B1 /* CharacterContentCell.xib */; };
+		5B6B83FE2CE379630077B8B1 /* MarvelCharactersDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B83FD2CE379630077B8B1 /* MarvelCharactersDetailsViewModel.swift */; };
 		5BBE5DDF2CE2A53D00FE61DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE5DDE2CE2A53D00FE61DA /* AppDelegate.swift */; };
 		5BBE5DE12CE2A53D00FE61DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE5DE02CE2A53D00FE61DA /* SceneDelegate.swift */; };
 		5BBE5DE32CE2A53D00FE61DA /* MarvelCharactersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE5DE22CE2A53D00FE61DA /* MarvelCharactersListVC.swift */; };
@@ -53,10 +66,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B616CF52CE395F100A0A352 /* MarvelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelResponse.swift; sourceTree = "<group>"; };
 		5B6B83D12CE2CC5E0077B8B1 /* MarvelCharactersDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersDetailsVC.swift; sourceTree = "<group>"; };
 		5B6B83D52CE322A50077B8B1 /* UIScrollView+Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Pagination.swift"; sourceTree = "<group>"; };
 		5B6B83DB2CE3261B0077B8B1 /* LoadMoreTableViewFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreTableViewFooter.xib; sourceTree = "<group>"; };
 		5B6B83DC2CE3261B0077B8B1 /* LoadMoreTableViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreTableViewFooter.swift; sourceTree = "<group>"; };
+		5B6B83E62CE351690077B8B1 /* MainImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainImageCell.xib; sourceTree = "<group>"; };
+		5B6B83E82CE351750077B8B1 /* MainImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageCell.swift; sourceTree = "<group>"; };
+		5B6B83EA2CE351860077B8B1 /* CharacterInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterInfoCell.xib; sourceTree = "<group>"; };
+		5B6B83EC2CE3518F0077B8B1 /* CharacterInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoCell.swift; sourceTree = "<group>"; };
+		5B6B83EE2CE351AF0077B8B1 /* CharacterContentContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterContentContainerCell.swift; sourceTree = "<group>"; };
+		5B6B83F02CE351B70077B8B1 /* CharacterContentContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterContentContainerCell.xib; sourceTree = "<group>"; };
+		5B6B83F22CE351C60077B8B1 /* RelatedLinksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedLinksCell.swift; sourceTree = "<group>"; };
+		5B6B83F42CE351D30077B8B1 /* RelatedLinksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedLinksCell.xib; sourceTree = "<group>"; };
+		5B6B83F72CE353AD0077B8B1 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		5B6B83F92CE3710E0077B8B1 /* CharacterContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterContentCell.swift; sourceTree = "<group>"; };
+		5B6B83FB2CE371150077B8B1 /* CharacterContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterContentCell.xib; sourceTree = "<group>"; };
+		5B6B83FD2CE379630077B8B1 /* MarvelCharactersDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersDetailsViewModel.swift; sourceTree = "<group>"; };
 		5BBE5DDB2CE2A53D00FE61DA /* MarvelExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBE5DDE2CE2A53D00FE61DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BBE5DE02CE2A53D00FE61DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,9 +136,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B616CF42CE395E200A0A352 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B616CF52CE395F100A0A352 /* MarvelResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5B6B83CE2CE2CC310077B8B1 /* CharactersDetailsVC */ = {
 			isa = PBXGroup;
 			children = (
+				5B616CF42CE395E200A0A352 /* Model */,
 				5B6B83D02CE2CC400077B8B1 /* ViewModel */,
 				5B6B83CF2CE2CC3B0077B8B1 /* View */,
 			);
@@ -122,6 +157,7 @@
 		5B6B83CF2CE2CC3B0077B8B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B6B83E12CE351080077B8B1 /* Cells */,
 				5B6B83D12CE2CC5E0077B8B1 /* MarvelCharactersDetailsVC.swift */,
 			);
 			path = View;
@@ -130,6 +166,7 @@
 		5B6B83D02CE2CC400077B8B1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5B6B83FD2CE379630077B8B1 /* MarvelCharactersDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -158,6 +195,31 @@
 				5B6B83DB2CE3261B0077B8B1 /* LoadMoreTableViewFooter.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5B6B83E12CE351080077B8B1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B6B83E82CE351750077B8B1 /* MainImageCell.swift */,
+				5B6B83E62CE351690077B8B1 /* MainImageCell.xib */,
+				5B6B83EC2CE3518F0077B8B1 /* CharacterInfoCell.swift */,
+				5B6B83EA2CE351860077B8B1 /* CharacterInfoCell.xib */,
+				5B6B83EE2CE351AF0077B8B1 /* CharacterContentContainerCell.swift */,
+				5B6B83F02CE351B70077B8B1 /* CharacterContentContainerCell.xib */,
+				5B6B83F92CE3710E0077B8B1 /* CharacterContentCell.swift */,
+				5B6B83FB2CE371150077B8B1 /* CharacterContentCell.xib */,
+				5B6B83F22CE351C60077B8B1 /* RelatedLinksCell.swift */,
+				5B6B83F42CE351D30077B8B1 /* RelatedLinksCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5B6B83F62CE353A00077B8B1 /* StoryBoarded */ = {
+			isa = PBXGroup;
+			children = (
+				5B6B83F72CE353AD0077B8B1 /* Storyboarded.swift */,
+			);
+			path = StoryBoarded;
 			sourceTree = "<group>";
 		};
 		5BBE5DD22CE2A53D00FE61DA = {
@@ -271,6 +333,7 @@
 		5BBE5E242CE2B48600FE61DA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5B6B83F62CE353A00077B8B1 /* StoryBoarded */,
 				5BBE5E272CE2B63300FE61DA /* Extensions */,
 				5BBE5E232CE2B47100FE61DA /* Constants */,
 			);
@@ -417,10 +480,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B6B83DD2CE3261B0077B8B1 /* LoadMoreTableViewFooter.xib in Resources */,
+				5B6B83F12CE351B70077B8B1 /* CharacterContentContainerCell.xib in Resources */,
+				5B6B83F52CE351D30077B8B1 /* RelatedLinksCell.xib in Resources */,
 				5BBE5DE82CE2A54000FE61DA /* Assets.xcassets in Resources */,
+				5B6B83E72CE351690077B8B1 /* MainImageCell.xib in Resources */,
 				5BBE5DEB2CE2A54000FE61DA /* Base in Resources */,
+				5B6B83EB2CE351860077B8B1 /* CharacterInfoCell.xib in Resources */,
 				5BBE5DE62CE2A53D00FE61DA /* Base in Resources */,
 				5BBE5E182CE2AC8700FE61DA /* MarvelCharacterViewCell.xib in Resources */,
+				5B6B83FC2CE371150077B8B1 /* CharacterContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,21 +514,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BBE5DE32CE2A53D00FE61DA /* MarvelCharactersListVC.swift in Sources */,
+				5B6B83FE2CE379630077B8B1 /* MarvelCharactersDetailsViewModel.swift in Sources */,
 				5BBE5E2F2CE2B78C00FE61DA /* MarvelCharacter.swift in Sources */,
 				5BBE5DDF2CE2A53D00FE61DA /* AppDelegate.swift in Sources */,
 				5BBE5DE12CE2A53D00FE61DA /* SceneDelegate.swift in Sources */,
 				5B6B83D22CE2CC5E0077B8B1 /* MarvelCharactersDetailsVC.swift in Sources */,
 				5BBE5E1A2CE2B01900FE61DA /* MarvelCharactersListViewModel.swift in Sources */,
 				5B6B83D62CE322A50077B8B1 /* UIScrollView+Pagination.swift in Sources */,
+				5B6B83F32CE351C60077B8B1 /* RelatedLinksCell.swift in Sources */,
 				5BBE5E1F2CE2B24B00FE61DA /* BaseService.swift in Sources */,
+				5B6B83E92CE351750077B8B1 /* MainImageCell.swift in Sources */,
+				5B6B83ED2CE3518F0077B8B1 /* CharacterInfoCell.swift in Sources */,
 				5BBE5E2C2CE2B6E400FE61DA /* MarvelAPIManager.swift in Sources */,
+				5B616CF62CE395F100A0A352 /* MarvelResponse.swift in Sources */,
+				5B6B83EF2CE351AF0077B8B1 /* CharacterContentContainerCell.swift in Sources */,
 				5BBE5E1D2CE2B1E100FE61DA /* MarvelCharactersService.swift in Sources */,
 				5BBE5E292CE2B64000FE61DA /* Crypto+Extension.swift in Sources */,
 				5BBE5E262CE2B49500FE61DA /* Constants.swift in Sources */,
 				5BBE5E312CE2BD6500FE61DA /* KingFisher+Extension.swift in Sources */,
 				5B6B83DE2CE3261B0077B8B1 /* LoadMoreTableViewFooter.swift in Sources */,
 				5BBF99432CE2C0BD00AC6F97 /* DispatchQueue+Extension.swift in Sources */,
+				5B6B83FA2CE3710E0077B8B1 /* CharacterContentCell.swift in Sources */,
 				5BBE5E322CE2BDC500FE61DA /* MarvelCharacterViewCell.swift in Sources */,
+				5B6B83F82CE353AD0077B8B1 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +725,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,6 +753,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

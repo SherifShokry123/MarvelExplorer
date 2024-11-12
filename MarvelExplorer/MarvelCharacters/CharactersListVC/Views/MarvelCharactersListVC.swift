@@ -43,14 +43,9 @@ final class MarvelCharactersListVC: UIViewController {
                     guard let self else { return }
                     
                     switch listState {
-                    case .failed:
-                        //show failure alert and log error to sentry.
-                        break
-                    case .empty:
-                        removeLoadMoreFooterView()
                     case .loading:
                         addLoadMoreFooterView()
-                    case .loaded:
+                    case .empty, .loaded, .failed:
                         removeLoadMoreFooterView()
                     }
                 }
@@ -80,7 +75,9 @@ final class MarvelCharactersListVC: UIViewController {
 
 extension MarvelCharactersListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("BNBN DID SELECT ITEM")
+        let vc = Storyboard.Main.viewController(MarvelCharactersDetailsVC.self)
+        vc.marvelCharacter = characters[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
@@ -93,8 +90,6 @@ extension MarvelCharactersListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = marvelCharactersTableView.dequeueReusableCell(withIdentifier: "MarvelCharacterViewCell", for: indexPath) as! MarvelCharacterViewCell
         let character = characters[indexPath.row]
-        print("BNBN ImageURL \(character.thumbnail.imageURL)")
-        print("BNBN Name \(character.name)")
         cell.setData(marvelCharacter: character)
         
         return cell

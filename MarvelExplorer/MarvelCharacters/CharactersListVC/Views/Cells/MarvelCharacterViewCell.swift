@@ -14,11 +14,32 @@ class MarvelCharacterViewCell: UITableViewCell {
     
     func setData(marvelCharacter: MarvelCharacter) {
         characterImageView.contentMode = .scaleAspectFill
-        characterImageView.loadImage(from: marvelCharacter.thumbnail.imageURL)
+        fadeIn(imageURL: marvelCharacter.thumbnail.imageURL)
         characterNameLabel.text = marvelCharacter.name
     }
     
+    func fadeIn(imageURL: String) {
+        characterImageView.loadImage(from: imageURL)
+        
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0.3,
+            options: [],
+            animations: {
+                self.characterImageView.alpha = 1
+            })
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        characterImageView.alpha = 0
+    }
+    
     override func prepareForReuse() {
+        super.prepareForReuse()
+        
         characterImageView.image = nil
     }
 }
+
