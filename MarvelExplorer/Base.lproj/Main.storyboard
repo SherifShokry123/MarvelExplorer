@@ -10,7 +10,7 @@
         <!--Marvel Characters ListVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MarvelCharactersListVC" customModule="MarvelExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MarvelCharactersListVC" id="BYZ-38-t0r" customClass="MarvelCharactersListVC" customModule="MarvelExplorer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,7 @@
         <!--Navigation Controller-->
         <scene sceneID="13z-Ix-XFK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiJ-OJ-6w6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wQY-hs-23d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Qv-pr-UvW">
@@ -94,7 +95,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wxc-2O-aan"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FiJ-OJ-6w6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>

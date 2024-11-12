@@ -8,10 +8,13 @@
 import Foundation
 import Moya
 
-class MarvelAPIManager {
+protocol MarvelAPIManager {
     typealias FetchCharactersCompletion = (Result<MarvelCharacterResponse, Error>) -> Void
+    func fetchCharacters(pageSize: Int, nextPageOffset: Int, completion: @escaping FetchCharactersCompletion)
+}
+
+class MarvelAPIManagerImplementor: MarvelAPIManager {
     private let provider = MoyaProvider<MarvelCharactersService>()
-    
     
     func fetchCharacters(pageSize: Int, nextPageOffset: Int, completion: @escaping FetchCharactersCompletion) {
             provider.request(.fetchMarvelCharacters(pageSize: pageSize,

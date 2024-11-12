@@ -9,7 +9,11 @@ import Foundation
 import Combine
 
 class MarvelCharactersListViewModel {
-    private let marvelAPIClient = MarvelAPIManager()
+    private let marvelAPIClient: MarvelAPIManager
+    
+    init(marvelAPIClient: MarvelAPIManager = MarvelAPIManagerImplementor()) {
+        self.marvelAPIClient = marvelAPIClient
+    }
     
     enum ListState {
         case failed

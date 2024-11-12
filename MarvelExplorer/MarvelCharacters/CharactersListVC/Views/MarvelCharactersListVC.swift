@@ -11,6 +11,7 @@ import Combine
 final class MarvelCharactersListVC: UIViewController {
     @IBOutlet weak private var marvelCharactersTableView: UITableView!
     
+    weak var coordinator: MainCoordinator?
     private lazy var viewModel: MarvelCharactersListViewModel = MarvelCharactersListViewModel()
     private var characters: [MarvelCharacter] = []
     private var cancellables = Set<AnyCancellable>()
@@ -75,9 +76,7 @@ final class MarvelCharactersListVC: UIViewController {
 
 extension MarvelCharactersListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = Storyboard.Main.viewController(MarvelCharactersDetailsVC.self)
-        vc.marvelCharacter = characters[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
+        coordinator?.navigateToMarvelCharacterDetails(character: characters[indexPath.row])
     }
     
 }
