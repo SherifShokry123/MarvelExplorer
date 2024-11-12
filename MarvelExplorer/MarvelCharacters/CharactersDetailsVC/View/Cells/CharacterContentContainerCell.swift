@@ -12,6 +12,7 @@ class CharacterContentContainerCell: UITableViewCell {
     @IBOutlet private weak var contentCollectionView: UICollectionView!
     
     var contentItems: [ContentSummary] = []
+    private var imageCache: [IndexPath: UIImage] = [:]
     
     func setData(title: String, contentItems: [ContentSummary]) {
         titleLabel.text = title
@@ -36,8 +37,17 @@ extension CharacterContentContainerCell: UICollectionViewDelegate, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = contentCollectionView.dequeueReusableCell(withReuseIdentifier: "CharacterContentCell", for: indexPath) as! CharacterContentCell
         let item = contentItems[indexPath.item]
-        cell.setData(title: item.name, imageURL: item.imageURL)
+        cell.setData(title: item.name, image: imageCache[indexPath])
         return cell
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard imageCache[indexPath] == nil else { return } // Skip loading if image is cached
+        
+        let item = contentItems[indexPath.item]
+        (cell as? CharacterContentCell)?.loadImage(from: item.imageResourceURL) { [weak self] image in
+            self?.imageCache[indexPath] = image
+        }
     }
 
     func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
@@ -49,10 +59,10 @@ extension CharacterContentContainerCell: UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, insetForSectionAt _: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 12
     }
 }

@@ -51,7 +51,7 @@ struct ContentSummary: Codable {
     let resourceURI: String
     let name: String
     
-    var imageURL: String {
+    var imageResourceURL: String {
         let publicKey = Constants.Networking.publicKey
         let privateKey = Constants.Networking.privateKey
         
