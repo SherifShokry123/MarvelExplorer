@@ -12,7 +12,7 @@ final class MarvelCharactersListVC: UIViewController {
     @IBOutlet weak private var marvelCharactersTableView: UITableView!
     
     weak var coordinator: MainCoordinator?
-    private lazy var viewModel: MarvelCharactersListViewModel = MarvelCharactersListViewModel()
+    var viewModel: MarvelCharactersListViewModel?
     private var characters: [MarvelCharacter] = []
     private var cancellables = Set<AnyCancellable>()
     
@@ -20,12 +20,12 @@ final class MarvelCharactersListVC: UIViewController {
         super.viewDidLoad()
         
         bind()
-        viewModel.fetchCharactersData()
+        viewModel?.fetchCharactersData()
         setupTableView()
     }
     
     private func bind() {
-        viewModel.charactersSubject
+        viewModel?.charactersSubject
             .sink { [weak self] characters in
                 guard let self else { return }
                 DispatchQueue.mainAsyncIfNeeded { [weak self] in
@@ -36,7 +36,7 @@ final class MarvelCharactersListVC: UIViewController {
             }
             .store(in: &cancellables)
         
-        viewModel.listStateSubject
+        viewModel?.listStateSubject
             .sink { [weak self] listState in
                 guard let self else { return }
                 
@@ -99,6 +99,6 @@ extension MarvelCharactersListVC: UITableViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        scrollView.startPagination() ? viewModel.fetchMoreCharacters() : ()
+        scrollView.startPagination() ? viewModel?.fetchMoreCharacters() : ()
     }
 }

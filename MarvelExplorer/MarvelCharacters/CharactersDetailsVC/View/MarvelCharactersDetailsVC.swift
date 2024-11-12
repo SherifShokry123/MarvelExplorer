@@ -16,14 +16,14 @@ class MarvelCharactersDetailsVC: UIViewController {
     var marvelCharacter: MarvelCharacter?
     var sections: [HomeSectionType] = []
     private var cancellables = Set<AnyCancellable>()
-    private lazy var viewModel: MarvelCharactersDetailsViewModel = MarvelCharactersDetailsViewModel(marvelCharacter: marvelCharacter!)
+    var viewModel: MarvelCharactersDetailsViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
         bind()
-        viewModel.makeDetailSections()
+        viewModel?.makeDetailSections()
     }
     
     private func setupTableView() {
@@ -37,7 +37,7 @@ class MarvelCharactersDetailsVC: UIViewController {
     }
     
     private func bind() {
-        viewModel.detailsSectionsSubject
+        viewModel?.detailsSectionsSubject
             .sink { [weak self] sections in
                 guard let self else { return }
                 DispatchQueue.mainAsyncIfNeeded { [weak self] in
@@ -109,7 +109,7 @@ extension MarvelCharactersDetailsVC: UITableViewDataSource, UITableViewDelegate 
     private func configureRelatedLinksCell(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RelatedLinksCell", for: indexPath) as! RelatedLinksCell
         
-        cell.setData(marvelCharacter: viewModel.marvelCharacter)
+        cell.setData(marvelCharacter: viewModel?.marvelCharacter)
         cell.openWebView = { [weak self] url in
             guard let self else { return }
             coordinator?.openURL(url: url)

@@ -15,7 +15,8 @@ class RelatedLinksCell: UITableViewCell {
     var marvelCharacter: MarvelCharacter?
     var openWebView: ((URL) -> Void)?
     
-    func setData(marvelCharacter: MarvelCharacter) {
+    func setData(marvelCharacter: MarvelCharacter?) {
+        guard let marvelCharacter = marvelCharacter else { return }
         self.marvelCharacter = marvelCharacter
         marvelCharacter.urls.forEach { url in
             switch url.type {

@@ -25,13 +25,17 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
+        let viewModel = MarvelCharactersListViewModel()
         let vc = Storyboard.Main.viewController(MarvelCharactersListVC.self)
+        vc.viewModel = viewModel
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
     
     func navigateToMarvelCharacterDetails(character: MarvelCharacter) {
+        let viewModel = MarvelCharactersDetailsViewModel(marvelCharacter: character)
         let vc = Storyboard.Main.viewController(MarvelCharactersDetailsVC.self)
+        vc.viewModel = viewModel
         vc.coordinator = self
         vc.marvelCharacter = character
         navigationController.pushViewController(vc, animated: true)
