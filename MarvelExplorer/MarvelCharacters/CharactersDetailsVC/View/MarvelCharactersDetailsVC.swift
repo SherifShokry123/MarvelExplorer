@@ -11,6 +11,8 @@ import Combine
 
 class MarvelCharactersDetailsVC: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
+    
+    weak var coordinator: MainCoordinator?
     var marvelCharacter: MarvelCharacter?
     var sections: [HomeSectionType] = []
     private var cancellables = Set<AnyCancellable>()
@@ -108,7 +110,10 @@ extension MarvelCharactersDetailsVC: UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCell(withIdentifier: "RelatedLinksCell", for: indexPath) as! RelatedLinksCell
         
         cell.setData(marvelCharacter: viewModel.marvelCharacter)
-        
+        cell.openWebView = { [weak self] url in
+            guard let self else { return }
+            coordinator?.openURL(url: url)
+        }
         return cell
     }
     

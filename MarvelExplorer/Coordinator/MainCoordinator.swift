@@ -36,4 +36,14 @@ class MainCoordinator: Coordinator {
         vc.marvelCharacter = character
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func openURL(url: URL) {
+        guard UIApplication.shared.canOpenURL(url) else {
+            debugPrint("Couldn't open URL with the following link: \(url.absoluteString)")
+            return
+        }
+        DispatchQueue.mainAsyncIfNeeded {
+            UIApplication.shared.open(url)
+        }
+    }
 }

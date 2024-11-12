@@ -13,6 +13,7 @@ class RelatedLinksCell: UITableViewCell {
     @IBOutlet private weak var wikiLinkView: UIView!
     @IBOutlet private weak var detailsLinkView: UIView!
     var marvelCharacter: MarvelCharacter?
+    var openWebView: ((URL) -> Void)?
     
     func setData(marvelCharacter: MarvelCharacter) {
         self.marvelCharacter = marvelCharacter
@@ -32,26 +33,18 @@ class RelatedLinksCell: UITableViewCell {
     
     @IBAction func detailsURLAction(sender: UIButton) {
         guard let detailURLStr = marvelCharacter?.urls.filter({ $0.type == "detail" }).first?.url, let detailURL = URL(string: detailURLStr) else { return }
-        openURL(url: detailURL)
+        openWebView?(detailURL)
     }
     
     @IBAction func comicsURLAction(sender: UIButton) {
         guard let comicsURLStr = marvelCharacter?.urls.filter({ $0.type == "comiclink" }).first?.url, let comicsURL = URL(string: comicsURLStr) else { return }
-        openURL(url: comicsURL)
+        openWebView?(comicsURL)
     }
     
     @IBAction func wikiURLAction(sender: UIButton) {
         guard let wikiURLStr = marvelCharacter?.urls.filter({ $0.type == "wiki" }).first?.url, let wikiURL = URL(string: wikiURLStr) else { return }
-        openURL(url: wikiURL)
+        openWebView?(wikiURL)
     }
     
-    private func openURL(url: URL) {
-        guard UIApplication.shared.canOpenURL(url) else {
-            debugPrint("Couldn't open URL with the following link: \(url.absoluteString)")
-            return
-        }
-        DispatchQueue.mainAsyncIfNeeded {
-            UIApplication.shared.open(url)
-        }
-    }
+    
 }
